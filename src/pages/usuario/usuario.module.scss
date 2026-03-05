@@ -1,0 +1,129 @@
+@use '../../styles/variables' as *;
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px); /* Ajuste para descontar o header se necessário */
+  background-color: $color-white;
+  padding: 2rem;
+}
+
+.card {
+  display: flex;
+  align-items: center; /* Alinha a imagem e o conteúdo verticalmente ao centro */
+  width: 100%;
+  max-width: 900px;
+  background-color: $color-white;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 2rem;
+  gap: 2rem;
+  /* Sombra leve opcional baseada no estilo visual de cards modernos */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
+
+.profileImageContainer {
+  flex-shrink: 0;
+
+  img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Borda azul grossa */
+    border: 5px solid #0095f6; 
+    padding: 3px; /* Espaço branco entre a foto e a borda colorida */
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    h1 {
+      font-family: $font-primary;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #000;
+      margin: 0;
+    }
+
+    .status {
+      font-family: $font-primary;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #2e7d32; /* Verde escuro */
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .bio {
+    font-family: $font-primary;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+  }
+
+  .contactInfo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: $font-primary;
+      font-size: 0.95rem;
+      color: #000;
+      
+      svg {
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+
+    span {
+      background-color: #dcedc8; /* Verde bem claro */
+      color: #33691e; /* Verde escuro para contraste */
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-family: $font-primary;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+  }
+}

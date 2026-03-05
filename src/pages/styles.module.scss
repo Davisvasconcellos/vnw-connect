@@ -1,0 +1,59 @@
+@use '../styles/variables' as *;
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 100px); /* Garante que o footer fique no final, descontando o header */
+    padding: 3rem 20px; /* Espaçamento interno */
+    box-sizing: border-box;
+    background-color: $color-white;
+
+    h1 {
+        font-family: $font-secondary;
+        font-size: 3.5rem; /* ~56px */
+        font-weight: 700;
+        color: $color-primary-blue;
+        margin-bottom: 3rem;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+        gap: 0; /* Gap zero para que as bordas funcionem bem */
+        
+        @media (max-width: 900px) {
+            flex-wrap: wrap;
+            gap: 2rem; /* Adiciona espaço quando quebrar linha */
+        }
+
+        article {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            padding: 0 1rem; /* Espaço interno para o conteúdo não colar na borda */
+            
+            @media (max-width: 900px) {
+                flex: 0 0 100%; /* Ocupa 100% da largura em telas menores */
+                max-width: 400px; /* Limita a largura do card */
+                padding: 0;
+            }
+        }
+
+        /* Borda vertical apenas em telas maiores */
+        @media (min-width: 901px) {
+            article:not(:last-child) {
+                border-right: 1px solid #CBCBCB;
+            }
+        }
+    }
+}

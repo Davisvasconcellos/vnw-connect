@@ -1,0 +1,14 @@
+@use '../../styles/variables' as *;
+
+footer {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9eef4;;
+    position: relative;
+    font-family: $font-secondary;
+    font-size: 22px;
+    font-weight: 400;
+    
+}

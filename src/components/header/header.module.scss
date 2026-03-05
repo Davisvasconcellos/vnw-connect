@@ -1,0 +1,60 @@
+@use '../../styles/variables' as *;
+
+.header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: $color-primary-blue;
+    position: relative;
+
+    .imgLogo {
+        max-width: 87px;
+        max-height: 65.7px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+    width: 100%;
+
+    .Link {
+        padding: 5px 20px;
+        font-family: $font-secondary;
+        color: $color-white;
+        font-size: 22px;
+        font-weight: 600;
+    }
+}
+
+.imgUser {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #00AAFF;
+    cursor: pointer;
+}
+
+.navUser {
+    position: absolute;
+    right: 0%;
+    top: 5rem;
+    background-color: $color-primary-blue;
+    
+    a {
+        display: block;
+        padding: 5px 10px;
+        color: $color-white;
+        text-align: end;
+    }
+}
+
+.closedNavUser {
+    display: none;
+}
