@@ -1,5 +1,5 @@
 import s from '../../pages/styles.module.scss'
-import InfoCard from "../../components/infoCard/infoCard"
+import InfoCard from "../../components/InfoCard/InfoCard2";
 
 export const Mentoria = () => {
   return (

@@ -1,5 +1,5 @@
 import s from '../../pages/styles.module.scss'
-import InfoCard from "../../components/InfoCard/InfoCard";
+import InfoCard from "../../components/InfoCard/InfoCard2";
 
 export const Voluntariado = () => {
   return (
